@@ -8,7 +8,9 @@
 
 **The screenshot confirms the data was recorded in the Kafka topic 'andrew_motko_enriched_athlete_avg'.**
 
-![kafka_topic_record](./screenshots/kafka-topic_record.png)
+![kafka_topic_records](./screenshots/kafka-topic_records.png)
+
+---
 
 ## Part 2: Building an End-to-End Batch Data Lake
 
