@@ -21,7 +21,7 @@ dag = DAG(
     tags=['andrew_motko'],  # Tags for the DAG
 )
 
-# Task for running data_pipeline_landing_to_bronze.py
+# Task for running landing_to_bronze.py
 # This task will run the script that loads data into the "bronze" layer of the data lake
 landing_to_bronze = BashOperator(
     task_id='landing_to_bronze',  # Unique task ID
@@ -29,7 +29,7 @@ landing_to_bronze = BashOperator(
     dag=dag,  # Associate this task with the DAG
 )
 
-# Task for running data_pipeline_bronze_to_silver.py
+# Task for running bronze_to_silver.py
 # This task will run the script that processes data from the "bronze" layer to the "silver" layer
 bronze_to_silver = BashOperator(
     task_id='bronze_to_silver',
@@ -37,7 +37,7 @@ bronze_to_silver = BashOperator(
     dag=dag,
 )
 
-# Task for running process_silver_to_gold.py
+# Task for running silver_to_gold.py
 # This task will run the script that processes data from the "silver" layer to the "gold" layer
 silver_to_gold = BashOperator(
     task_id='silver_to_gold',  
